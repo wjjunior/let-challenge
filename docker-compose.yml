@@ -1,0 +1,50 @@
+version: "3"
+services:
+  # Server
+  server:
+    build:
+      context: ./server/
+    container_name: server
+    restart: unless-stopped
+    command: npm run dev
+    volumes:
+      - ./server/:/usr/app
+      - /usr/app/node_modules
+    depends_on:
+      - mongodb
+    networks:
+      - let-challenge-network
+    ports:
+      - 4000:4000
+  # MongoDB
+  mongodb:
+    image: mongo
+    restart: unless-stopped
+    container_name: mongodb
+    volumes:
+      - mongo:/data
+    networks:
+      - let-challenge-network
+    ports:
+      - 27017:27017
+  # Client
+  client:
+    build:
+      context: ./client/
+    command: npm run serve
+    volumes:
+      - ./client/:/usr/app
+      - /usr/app/node_modules
+    depends_on: 
+        - server
+    networks:
+        - let-challenge-network
+    ports:
+        - 8080:8080
+
+volumes:
+  mongo:
+
+networks:
+  let-challenge-network:
+    driver: bridge
