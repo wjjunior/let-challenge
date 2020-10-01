@@ -1,4 +1,6 @@
 # Small Medium (Let Challenge)
+
+![Small Medium](https://user-images.githubusercontent.com/13741072/94860072-e949a080-040b-11eb-8c4b-d88e6f8691a6.png)
 > ## :page_with_curl: Recursos
 
 - Docker
