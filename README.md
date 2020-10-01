@@ -16,19 +16,6 @@
 - Vue
 - Vuex
 - Apollo Server / Apollo Client
-> ## :point_up: Princípios
-
-* Single Responsibility Principle (SRP)
-* Open Closed Principle (OCP)
-* Liskov Substitution Principle (LSP)
-* Interface Segregation Principle (ISP)
-* Dependency Inversion Principle (DIP)
-* Separation of Concerns (SOC)
-* Don't Repeat Yourself (DRY)
-* You Aren't Gonna Need It (YAGNI)
-* Keep It Simple, Silly (KISS)
-* Composition Over Inheritance
-* Small Commits
 
 > ## :books: Requisitos
 
